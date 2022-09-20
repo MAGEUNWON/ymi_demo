@@ -1,3 +1,5 @@
+
+
 const submit = document.getElementById('submit');
 submit.addEventListener("click", function(){
   const form = document.getElementById('form');
@@ -17,7 +19,7 @@ submit.addEventListener("click", function(){
   }
 
   form.action = "http://127.0.0.1:5500/generalForum.html"
-  // action 은 form 데이터를 보낼 곳
+  // action 은 form 데이터를 보낼 곳, 어디다 연결해야하지?
   form.method = "GET";
   // method 은 폼의 메서드 방식(POST/GET)
   form.submit();

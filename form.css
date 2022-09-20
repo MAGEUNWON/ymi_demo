@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+#root > form {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#root > form > div:nth-child(1) {
+  width: auto;
+  height: auto;
+}
+#root > form > div:nth-child(1) > label {
+  font-size: 2rem;
+}
+#root > form > div:nth-child(1) > input {
+  width: 400px;
+  height: 30px;
+}
+#root > form > div:nth-child(2) {
+  width: auto;
+  height: auto;
+}
+#root > form > div:nth-child(2) > label {
+  font-size: 2rem;
+}
+#root > form > div:nth-child(2) > input {
+  width: 400px;
+  height: 30px;
+}
+#root > form > div:nth-child(3) {
+  width: auto;
+  height: auto;
+}
+#root > form > div:nth-child(3) > label {
+  font-size: 2rem;
+}
+#root > form > div:nth-child(3) > textarea {
+  width: 400px;
+  height: 300px;
+}
+#root > form > div:nth-child(4) {
+  width: 400px;
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+#root > form > div:nth-child(4) > button:nth-child(1) {
+  width: 70px;
+  height: 30px;
+  background-color: rgb(20, 157, 167);
+  color: white;
+  border-radius: 10%;
+  border: none;
+}
+#root > form > div:nth-child(4) > button:nth-child(2) {
+  width: 70px;
+  height: 30px;
+  background-color: rgb(129, 129, 129);
+  color: white;
+  border-radius: 10%;
+  border: none;
+  margin-left: 5px;
+}
+#root > form > div:nth-child(4) > div {
+  width: 50px;
+  height: 40px;
+  background-image: url(./Rectangle\ 57.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-top: 1rem;
+  margin-left: 13rem;
+}/*# sourceMappingURL=form.css.map */
