@@ -5,6 +5,7 @@
 $col-1: rgb(173, 166, 166);
 $col-2: rgba(243, 237, 237, 0.938);
 $col-3: red;
+$col-4 :#FFFCFC;
 
 
 @mixin size($width, $height){
@@ -172,15 +173,36 @@ $col-3: red;
             margin-left: 2rem;
           }
         }
-        
+
+        &>div:nth-child(6){
+          position: absolute;
+          @include size(500px,450px);
+          @include flexSet(space-evenly,center,column);
+          background-color: $col-4;
+          visibility:hidden;
+          
+  
+          &>span{
+            text-align: center;
+            font-size: 2rem;
+          }
+  
+          &>button:nth-child(2){
+            @include size(250px,70px);
+          }
+  
+          &>button:nth-child(3){
+            @include size(250px,70px);
+          }
+        }
+
       }
 
-      &>div:nth-child(3){
-        // 모달창 css
-      }
+      
 
     }
 
   }
 
 }
+

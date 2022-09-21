@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script type="module" src="./information.js" defer></script>
   <link rel="stylesheet" href="./information.css">
 </head>
 <body>
@@ -76,18 +77,19 @@
           </div>
 
           <div>
-            <button type="submit" id ="submit">수정하기</button>
-            <button type="button" id ="button">탈퇴하기</button>
+            <button type="submit" id ="modify">수정하기</button>
+            <button type="button" id ="withdraw">탈퇴하기</button>
             <!-- 탈퇴하기 누르면 모달창 구현? -->
           </div>
-        </div>
 
-        <div id = "modal">
-          <span>정말 탈퇴 하시겠습니까?</span>
-          <button>확인</button>
-          <button>취소</button>
+          <div id = "modal">
+            <span>정말 탈퇴 하시겠습니까?</span>
+            <button type="submit" id ="mButton">확인</button>
+            <button type="submit" id="mButton2">취소</button>
+          </div>
+          <!-- 모달 화면 -->
+
         </div>
-        <!-- 모달 화면 -->
         
       </div>
     </div>
