@@ -53,6 +53,10 @@
   height: 30px;
   margin-top: 2rem;
 }
+#root > #div1 > div:nth-child(2) > div:nth-child(1) > p {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
 #root > #div1 > div:nth-child(2) > div:nth-child(2) {
   width: 200px;
   height: 30px;
@@ -116,6 +120,7 @@
   font-weight: bold;
 }
 #root > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) {
+  position: relative;
   width: 100%;
   height: 60%;
   display: flex;
@@ -164,6 +169,7 @@
 }
 #root > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div:nth-child(6) {
   position: absolute;
+  left: 10rem;
   width: 500px;
   height: 450px;
   display: flex;

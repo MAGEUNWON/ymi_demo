@@ -1,0 +1,146 @@
+*{
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+
+$col-1: rgb(173, 166, 166);
+$col-2: rgba(243, 237, 237, 0.938);
+$col-3: red;
+$col-4 :#FFFCFC;
+
+
+@mixin size($width, $height){
+  width: $width;
+  height: $height;
+}
+
+@mixin flexSet($justity, $align, $direction:row){
+  display: flex;
+  justify-content: $justity;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+#root{
+  @include size(100vw,100vh);
+  @include flexSet(center,center,row);
+
+  &>#div1{
+    @include size(20vw,100vh);
+
+    &>div:nth-child(1){
+      @include size(100%,20vh);
+      @include flexSet(center,center,column);
+
+      &>div:nth-child(1){
+        @include size(100px,100px);
+        background-image: url(../information/fa6-solid_user-gear.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+
+      &>div:nth-child(2){
+        @include size(90px,30px);
+
+        &>p{
+          text-align:left;
+          font-weight: bold;
+        }
+      }
+    }
+
+    &>div:nth-child(2){
+      @include size(100%,80vh);
+      @include flexSet(left,center,column);
+      background-color: $col-1;
+
+      &>div:nth-child(1){
+        @include size(200px,30px);
+        margin-top: 2rem;
+      }
+
+      &>div:nth-child(2){
+        @include size(200px,30px);
+        margin-top: 2rem;
+
+        &>p{
+          font-weight: bold;
+          font-size: 1.3rem;
+        }
+      }
+
+      &>div:nth-child(3){
+        @include size(200px,30px);
+        margin-top: 2rem;
+      }
+
+    }
+  }
+
+  &>div:nth-child(2){
+    @include size(80vw,100vh);
+    @include flexSet(center,center,row);
+
+    &>div:nth-child(1){
+      @include size(35vw,80vh);
+      @include flexSet(space-around,center,row);
+      flex-wrap: wrap;
+
+      &>div:nth-child(1){
+        @include size(17vw,25vh);
+        background-image: url(./movie1.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+
+      &>div:nth-child(2){
+        @include size(17vw,25vh);
+        background-image: url(./movie2.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+
+      &>div:nth-child(3){
+        @include size(17vw,25vh);
+        background-image: url(./movie3.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+
+      &>div:nth-child(4){
+        @include size(17vw,25vh);
+        background-image: url(./movie4.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+
+      &>div:nth-child(5){
+        @include size(17vw,25vh);
+        background-image: url(./movie5.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+
+      &>div:nth-child(6){
+        @include size(17vw,25vh);
+        background-image: url(./movie6.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &>div:nth-child(2){
+      @include size(35vw,100vh);
+      @include flexSet(center,center);
+
+      &>div{
+        @include size(400px,400px);
+        background-image: url(./pentagon.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+    }
+
+
+  }
+
+}

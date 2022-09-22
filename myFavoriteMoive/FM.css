@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+#root > #div1 {
+  width: 20vw;
+  height: 100vh;
+}
+#root > #div1 > div:nth-child(1) {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#root > #div1 > div:nth-child(1) > div:nth-child(1) {
+  width: 100px;
+  height: 100px;
+  background-image: url(../information/fa6-solid_user-gear.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+#root > #div1 > div:nth-child(1) > div:nth-child(2) {
+  width: 90px;
+  height: 30px;
+}
+#root > #div1 > div:nth-child(1) > div:nth-child(2) > p {
+  text-align: left;
+  font-weight: bold;
+}
+#root > #div1 > div:nth-child(2) {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(173, 166, 166);
+}
+#root > #div1 > div:nth-child(2) > div:nth-child(1) {
+  width: 200px;
+  height: 30px;
+  margin-top: 2rem;
+}
+#root > #div1 > div:nth-child(2) > div:nth-child(2) {
+  width: 200px;
+  height: 30px;
+  margin-top: 2rem;
+}
+#root > #div1 > div:nth-child(2) > div:nth-child(2) > p {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+#root > #div1 > div:nth-child(2) > div:nth-child(3) {
+  width: 200px;
+  height: 30px;
+  margin-top: 2rem;
+}
+#root > div:nth-child(2) {
+  width: 80vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+#root > div:nth-child(2) > div:nth-child(1) {
+  width: 35vw;
+  height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#root > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) {
+  width: 17vw;
+  height: 25vh;
+  background-image: url(./movie1.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+#root > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) {
+  width: 17vw;
+  height: 25vh;
+  background-image: url(./movie2.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+#root > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) {
+  width: 17vw;
+  height: 25vh;
+  background-image: url(./movie3.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+#root > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) {
+  width: 17vw;
+  height: 25vh;
+  background-image: url(./movie4.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+#root > div:nth-child(2) > div:nth-child(1) > div:nth-child(5) {
+  width: 17vw;
+  height: 25vh;
+  background-image: url(./movie5.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+#root > div:nth-child(2) > div:nth-child(1) > div:nth-child(6) {
+  width: 17vw;
+  height: 25vh;
+  background-image: url(./movie6.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+#root > div:nth-child(2) > div:nth-child(2) {
+  width: 35vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+#root > div:nth-child(2) > div:nth-child(2) > div {
+  width: 400px;
+  height: 400px;
+  background-image: url(./pentagon.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}/*# sourceMappingURL=FM.css.map */
