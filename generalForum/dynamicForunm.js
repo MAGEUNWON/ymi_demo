@@ -76,3 +76,5 @@ function Forum(){
    // form >  4번째 div(등록하기) >button
 }
 Forum();
+
+// console.log("hi")
