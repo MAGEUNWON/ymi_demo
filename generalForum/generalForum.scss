@@ -86,14 +86,25 @@ $col-3: rgb(129, 129, 129);
         margin-left: 5px;
       }
 
-      &>div{
-        @include size(50px,40px);
-        background-image: url(./Rectangle\ 57.png);
-        background-size: 100%;
-        background-repeat: no-repeat;
-        margin-top: 1rem;
-        margin-left: 13rem;
+      &>label{
+        // @include size(50px,40px);
+
+        &>div{
+          @include size(50px,40px);
+          background-image: url(./material-symbols_add-a-photo.png);
+          background-size: 100%;
+          background-repeat: no-repeat;
+          margin-top: 1rem;
+          margin-left: 13rem;
+        }
+        
       }
+
+      &>input{
+        display:none;
+      }
+
+      
       
     }
   }

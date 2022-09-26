@@ -74,12 +74,15 @@
   border: none;
   margin-left: 5px;
 }
-#root > form > div:nth-child(4) > div {
+#root > form > div:nth-child(4) > label > div {
   width: 50px;
   height: 40px;
-  background-image: url(./Rectangle\ 57.png);
+  background-image: url(./material-symbols_add-a-photo.png);
   background-size: 100%;
   background-repeat: no-repeat;
   margin-top: 1rem;
   margin-left: 13rem;
+}
+#root > form > div:nth-child(4) > input {
+  display: none;
 }/*# sourceMappingURL=generalForum.css.map */

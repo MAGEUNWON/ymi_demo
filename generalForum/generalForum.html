@@ -34,8 +34,12 @@
       <div>
         <button type="submit" id ="submit">등록하기</button>
         <button type="button" id ="button">목록으로</button>
-        <div></div>
-        <!-- 업로드 사진 들어감. 클릭시 구현은 안함. 이미지만 있음.  -->
+        <label for="file" id = "lbFile">
+          <!-- input file이랑 label 연결, laber for = "input id " 써주면 연결됨, 위에 label, input도 같은 원리 -->
+          <div></div>
+        </label>
+        <input type="file" id = "file" accept="image/*" >
+        <!-- accept = ".gif, .jpg, .png" 확장자 지정? 아니면 image전체? -->
       </div>
 
     </form>
