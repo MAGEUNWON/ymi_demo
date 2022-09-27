@@ -46,15 +46,19 @@ input.addEventListener('change',()=>{
   container.style.visibility = "hidden";
   container.appendChild(newImage);
   console.log(file);
+
 });
 
-const delButton = document.getElementById('delete');
 
-delButton.addEventListener('click', ()=>{
-    const file=document.getElementById('file');
-    
-  
-})
+
+const delButton = document.getElementById('delete');
+delButton.onclick = deleteimage;
+
+function deleteimage(){
+  let newImage = document.getElementById('image-show').lastElementChild;
+  newImage.style.visibility = "hidden";
+}
+// 안됌. 그냥 node를 없애야 하나봄. 가려지기만 하고 그대로 있음. 그럼 초기 이미지도 hidden말고 다른거 써야하나?
 
 // function loadFile(input){
 //   const file = input.files[0]; //선택된 파일 가져옴
