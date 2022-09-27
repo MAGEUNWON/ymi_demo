@@ -74,14 +74,13 @@
   border: none;
   margin-left: 5px;
 }
-#root > form > div:nth-child(4) > label > div {
-  width: 50px;
-  height: 40px;
+#root > form > div:nth-child(4) > label:nth-child(3) {
+  width: 30px;
+  height: 30px;
   background-image: url(./material-symbols_add-a-photo.png);
   background-size: 100%;
   background-repeat: no-repeat;
-  margin-top: 1rem;
-  margin-left: 13rem;
+  margin-left: 14rem;
 }
 #root > form > div:nth-child(4) > input {
   display: none;

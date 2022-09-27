@@ -86,18 +86,12 @@ $col-3: rgb(129, 129, 129);
         margin-left: 5px;
       }
 
-      &>label{
-        // @include size(50px,40px);
-
-        &>div{
-          @include size(50px,40px);
+      &>label:nth-child(3){
+        @include size(30px,30px);
           background-image: url(./material-symbols_add-a-photo.png);
           background-size: 100%;
           background-repeat: no-repeat;
-          margin-top: 1rem;
-          margin-left: 13rem;
-        }
-        
+          margin-left: 14rem;
       }
 
       &>input{
