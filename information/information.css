@@ -88,27 +88,45 @@
   text-align: center;
 }
 #root > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) {
-  width: 80%;
-  height: 100%;
-  margin-left: 2rem;
-  margin-top: 2rem;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
 }
 #root > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) {
-  width: 100px;
-  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: row;
+}
+#root > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div {
+  width: 150px;
+  height: 150px;
   background-image: url(./ph_user-circle-fill.png);
-  background-size: 100%;
   background-repeat: no-repeat;
+  background-size: 100%;
+}
+#root > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button {
+  width: 20px;
+  height: 20px;
+  margin-left: 1rem;
 }
 #root > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) {
-  width: 600px;
+  width: 400px;
   height: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
   background-color: rgba(243, 237, 237, 0.938);
   margin-top: 1rem;
 }
-#root > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > button {
-  margin-top: 5px;
-  margin-left: 10px;
+#root > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > form {
+  width: 80%;
+  height: 100%;
+  margin-top: 0.5rem;
 }
 #root > div:nth-child(2) > div:nth-child(2) {
   width: 100%;

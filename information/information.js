@@ -7,6 +7,10 @@
 
 const tag={
   root:document.getElementById('root'),
+  fileLabel:document.getElementById('lbFile'),
+  fileInput: document.getElementById('file'),
+  saveButton:document.getElementById('saveButton'),
+  IDLabe:document.getElementById('lbID'),
   password:document.getElementById('password'),
   psConfirm:document.getElementById('psConfirm'),
   nickname:document.getElementById('nickname'),
@@ -18,6 +22,58 @@ const tag={
 }
 // 태그들 객체로 묶음
 
+const save = document.getElementById('saveButton');
+save.onclick = showImage;
+
+function showImage(){
+  let newImg = document.getElementById('image-show').lastElementChild;
+  newImg.style.visibility = "visible";
+}
+
+const input = document.getElementById('file');
+
+input.addEventListener('change',()=>{
+  const file = input.files[0]; //선택된 파일 가져옴
+  let newImage = document.createElement("img");
+  newImage.setAttribute("class", "img");
+  newImage.src = URL.createObjectURL(file);
+  newImage.style.width = "150px";
+  newImage.style.height = "150px";
+  // newImage.style.visibility = "hidden";
+  newImage.style.objectFit = "contain";
+
+  let container = document.getElementById('image-show');
+  container.style.visibility = "hidden";
+  container.appendChild(newImage);
+  console.log(file);
+});
+
+const delButton = document.getElementById('delete');
+
+delButton.addEventListener('click', ()=>{
+    const file=document.getElementById('file');
+    
+  
+})
+
+// function loadFile(input){
+//   const file = input.files[0]; //선택된 파일 가져옴
+//   let newImage = document.createElement("img");
+//   newImage.setAttribute("class", "img");
+//   newImage.src = URL.createObjectURL(file);
+//   newImage.style.width = "100px";
+//   newImage.style.height = "100px";
+//   newImage.style.visibility = "hidden";
+//   newImage.style.objectFit = "contain";
+
+//   const container = document.getElementById('image-show');
+//   container.appendChild(newImage);
+// };
+// html에 js가 defer로 연결되어 있어서 아직 선언이 안됨, 해결하려면 async써야함. react 쓸거면 이걸로 연습해 보는게 좋음. 
+
+
+
+
 function init(){
   tag.withdraw.addEventListener('click', function(){
     tag.modal.style.visibility="visible";
@@ -27,3 +83,5 @@ function init(){
   });
 }
 init();
+// 모달 함수
+
