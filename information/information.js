@@ -16,11 +16,12 @@ const tag={
   nickname:document.getElementById('nickname'),
   modify:document.getElementById('modify'),
   withdraw:document.getElementById('withdraw'),
+
   modal:document.getElementById('modal'),
   mButton1:document.getElementById('mButton1'),
   mButton2:document.getElementById('mButton2')
 }
-// 태그들 객체로 묶음
+// ------------태그들 객체로 묶음--------------------------
 
 const save = document.getElementById('saveButton');
 save.onclick = showImage;
@@ -48,7 +49,7 @@ input.addEventListener('change',()=>{
   
 
 });
-
+// -----------사진 파일 가져와서 저장하는 함수 --------------------
 
 
 const delButton = document.getElementById('delete');
@@ -67,7 +68,7 @@ function deleteimage(){
   parent.style.visibility = "visible";
 }
 // image-show 부모노드에서 자식 노드인 img 지워버림 
-// 사진 삭제하면 다시 기본 사진 뜨게 만듬. 
+// ----사진 삭제할 수 있고 삭제하면 다시 기본 사진 뜨게 만든 함수-------- 
 
 
 // function deleteimage(){
@@ -104,6 +105,51 @@ function deleteimage(){
 
 
 
+const psConfirm = tag.psConfirm;
+psConfirm.onclick = minLength;
+
+function minLength(){
+  const psValue = tag.password.value;
+  let regPass = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{5,}$/;
+  // /^[a-zA-Z0-9].*[!,@,^,*,%,#,&,_,~];
+  // /^(?=.*[a-zA-Z0-9])(?=.*[!,@,^,*,%,#,&,_,~])(?=.[0-9])/;
+
+  if(psValue.length<5 || psValue.length>16){
+    alert("비밀번호는 5자리 이상, 16자리 이하로 입력해주세요");
+    return false;
+    
+  } else if(psValue.search(/\s/) != -1){
+    alert("비밀번호는 공백 없이 입력해주세요");
+    return false;
+  }
+
+  if(!regPass.test(psValue)){
+    alert("비밀번호는 영문, 숫자, 특수문자(!@^*%#&_~만 허용)를 사용하여 5~16자리 입력해주세요. 영문은 대소문자를 구분합니다.");
+    return false;
+  } else{
+    alert("비밀번호가 정상적으로 입력되었습니다.")
+    return true;
+  }
+
+}
+//---------------------비밀번호 유효성 검사--------------------------
+
+
+const modify = tag.modify;
+modify.onclick = password;
+
+function password(){
+  const pass1 = tag.password.value;
+  const pass2 = tag.psConfirm.value;
+  if(pass1 !== pass2){
+    alert("비밀번호가 일치하지 않습니다");
+    return false;
+  } 
+  
+}
+
+//--------------비밀번호 일치하는지 확인하는 함수---------------------- 
+
 
 function init(){
   tag.withdraw.addEventListener('click', function(){
@@ -114,5 +160,5 @@ function init(){
   });
 }
 init();
-// 모달 함수
+// --------------------------모달 함수-----------------------------
 
