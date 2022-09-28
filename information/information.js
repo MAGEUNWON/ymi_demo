@@ -45,7 +45,7 @@ input.addEventListener('change',()=>{
   let container = document.getElementById('image-show');
   container.style.visibility = "hidden";
   container.appendChild(newImage);
-  // console.log(file);
+  
 
 });
 
@@ -56,10 +56,15 @@ delButton.onclick = deleteimage;
 
 function deleteimage(){
   const parent = document.getElementById('image-show');
-  parent.innerHTML = "";
+  const child = document.querySelector('#image-show>img');
+  parent.removeChild(child);
+  // console.log(parent.children)
+  // console.log(child);
 
-  let container = document.getElementById('image-show');
-  container.style.visibility = "visible";
+  // parent.innerHTML = "";
+  // removechilde랑 같은건가? 효과는 같음. 
+  
+  parent.style.visibility = "visible";
 }
 // image-show 부모노드에서 자식 노드인 img 지워버림 
 // 사진 삭제하면 다시 기본 사진 뜨게 만듬. 
