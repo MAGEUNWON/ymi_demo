@@ -62,8 +62,8 @@ function deleteimage(){
   // console.log(parent.children)
   // console.log(child);
 
-  // parent.innerHTML = "";
-  // removechilde랑 같은건가? 효과는 같음. 
+  // *parent.innerHTML = ""; 
+  // *removeChild가 더 정석적이지만 복잡해서 나중에는 innerHTML =""; 을 더 많이 쓰게 될 것. 둘 다 상관없지만 편하게 쓰려면 innerHTML=""; 쓰는게 좋음. 
   
   parent.style.visibility = "visible";
 }
