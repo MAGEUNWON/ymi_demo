@@ -39,13 +39,13 @@ input.addEventListener('change',()=>{
   newImage.src = URL.createObjectURL(file);
   newImage.style.width = "150px";
   newImage.style.height = "150px";
-  // newImage.style.visibility = "hidden";
+  newImage.style.visibility = "hidden";
   newImage.style.objectFit = "contain";
 
   let container = document.getElementById('image-show');
   container.style.visibility = "hidden";
   container.appendChild(newImage);
-  console.log(file);
+  // console.log(file);
 
 });
 
@@ -55,12 +55,34 @@ const delButton = document.getElementById('delete');
 delButton.onclick = deleteimage;
 
 function deleteimage(){
-  let newImage = document.getElementById('image-show').lastElementChild;
-  newImage.style.visibility = "hidden";
-}
-// 안됌. 그냥 node를 없애야 하나봄. 가려지기만 하고 그대로 있음. 그럼 초기 이미지도 hidden말고 다른거 써야하나?
+  const parent = document.getElementById('image-show');
+  parent.innerHTML = "";
 
-// function loadFile(input){
+  let container = document.getElementById('image-show');
+  container.style.visibility = "visible";
+}
+// image-show 부모노드에서 자식 노드인 img 지워버림 
+// 사진 삭제하면 다시 기본 사진 뜨게 만듬. 
+
+
+// function deleteimage(){
+//   const file = input.files;
+//   console.log(file)
+//   const arrayFile = Array.from(file);
+//   console.log(arrayFile);
+//   const emptyAarry = arrayFile.splice(0);
+//   console.log(arrayFile);
+  
+//   let obj = {...arrayFile}
+//   console.log(obj);
+//   let container = document.getElementById('image-show');
+//   container.appendChild(obj);
+// }
+// 아니 뭐 객체를 배열로 바꾸고 배열초기화하고 다시 객체로 바꾸고 이딴거 필요 없었네 
+
+
+
+//* function loadFile(input){
 //   const file = input.files[0]; //선택된 파일 가져옴
 //   let newImage = document.createElement("img");
 //   newImage.setAttribute("class", "img");
@@ -73,7 +95,7 @@ function deleteimage(){
 //   const container = document.getElementById('image-show');
 //   container.appendChild(newImage);
 // };
-// html에 js가 defer로 연결되어 있어서 아직 선언이 안됨, 해결하려면 async써야함. react 쓸거면 이걸로 연습해 보는게 좋음. 
+// *html에 js가 defer로 연결되어 있어서 아직 선언이 안됨, 해결하려면 async써야함. react 쓸거면 이걸로 연습해 보는게 좋음. 
 
 
 
