@@ -101,7 +101,7 @@ function deleteimage(){
 //   const container = document.getElementById('image-show');
 //   container.appendChild(newImage);
 // };
-// *html에 js가 defer로 연결되어 있어서 아직 선언이 안됨, 해결하려면 async써야함. react 쓸거면 이걸로 연습해 보는게 좋음. 
+// input에 onchange 쓰려고 했는데 html에 js가 defer로 연결되어 있어서 아직 선언이 안됨, 해결하려면 async써야함. react 쓸거면 이걸로 연습해 보는게 좋음. 
 
 
 
